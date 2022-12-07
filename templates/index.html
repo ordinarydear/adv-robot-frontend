@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Home</title>
+{% endblock %}
+
+{% block body %}
+<div class="web-ctn">
+    <div class="header-ctn">
+        <h1>AUTOMATED DELIVERY ROBOT</h1>
+        <p>PICK A ROOM</p>
+    </div>
+    <div class="button-ctn">
+        <div class="room-button">
+            <img class="room1-img" src="{{url_for('static', filename='img/room1-cartoon.png')}}" >
+            <div class="room-text-ctn">
+                <p class="room-text">ROOM</p>
+                <div class="room-number">01</div>
+            </div>
+        </div>
+        <div class="room-button">
+            <img class="room2-img" src="{{url_for('static', filename='img/room2-cartoon.png')}}" >
+            <div class="room-text-ctn">
+                <p class="room-text">ROOM</p>
+                <div class="room-number">02</div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
