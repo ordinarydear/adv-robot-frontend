@@ -11,14 +11,14 @@
         <p>PICK A ROOM</p>
     </div>
     <div class="button-ctn">
-        <div class="room-button">
-            <img class="room1-img" src="{{url_for('static', filename='img/room1-cartoon.png')}}" >
-            <div class="room-text-ctn">
+        <div class="room-button" onclick="start(1)">
+                <img class="room1-img" src="{{url_for('static', filename='img/room1-cartoon.png')}}" >
+                <div class="room-text-ctn">
                 <p class="room-text">ROOM</p>
                 <div class="room-number">01</div>
             </div>
         </div>
-        <div class="room-button">
+        <div class="room-button" onclick="start(2)">
             <img class="room2-img" src="{{url_for('static', filename='img/room2-cartoon.png')}}" >
             <div class="room-text-ctn">
                 <p class="room-text">ROOM</p>
@@ -27,4 +27,9 @@
         </div>
     </div>
 </div>
+<script>
+    function start(room_number) {
+        window.location.pathname=`start/${room_number}`
+    }
+    </script>
 {% endblock %}
